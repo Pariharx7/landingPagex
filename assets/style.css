@@ -1,16 +1,36 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
 :root{
     --color_one: #2360b6;
     --color-2: #91989c;
 }
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+@font-face {
+    font-family: "Norse Bold";
+    src: url(./Norse-Bold.otf);
 }
 body{
-    height: 100%;
+    height: 100vh;
+    width: 100%;
     background-color: var(--color-2);
+    /* overflow-x: hidden; */
 }
+
 
 nav{
     display: flex;
@@ -89,7 +109,7 @@ main{
     font-size: 48px;
     font-weight: bolder;
     padding: 8px;
-    
+    font-family: "Norse Bold";
 }
 
 .buttons{
@@ -100,6 +120,12 @@ main{
     height: 27px;
     width: 110px;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons:hover{
+    background: #3882F6;
+    color: #fff;
 }
 
 .container{
@@ -109,7 +135,11 @@ main{
     height: 22vh;
     max-width: 100%;
     margin: 120px;
+    font-family: "Norse Bold";
 }
+.container p{
+    color: #fff;
+} 
 
 .blue-boxes{
     border: 2px solid #3882F6;
@@ -118,9 +148,6 @@ main{
     height: 210px;
     background-color: #3882F6;
 }
-
-
-
 .quote-section{
     height: 44vh;
     background-color: #E5E7EB;
@@ -133,6 +160,7 @@ main{
 }
 .quote-span{
     float: right;
+    font-family: "Norse Bold";
 }
 
 .signup-section{
@@ -172,13 +200,12 @@ footer{
 }
 
 .sections h2{
-    /* margin: 50px; */
     text-align: center;
     font-size: 36px;
     font-weight: bolder;
     color: navy;
     text-decoration: underline;
-    
+    font-family: "Norse Bold";
 }
 
 .gingka-img{
@@ -229,3 +256,104 @@ footer{
     text-decoration: none;
     color: #1F2937;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    body {
+      padding: 0; 
+    }
+    .logo-head{
+        width: 20rem;
+        height: 5rem;
+        border-radius: 3rem;
+        padding: 5px;
+    }
+    main{
+        flex-wrap: wrap-reverse;
+        padding: 0;
+        height: 50%;
+    }
+.main-child{
+    padding: 0;
+    margin: 0;
+    top: -40%;
+}
+.main-left-child{
+    padding: 0;
+    margin: 0;
+    top: 0;
+    font-size: 15px;
+    text-align: end;
+}
+.main-left-child h1{
+    font-size: 30px;
+    text-align: center;
+}
+.main-child img{
+    position: relative;
+    top: 80%;
+    height: 10rem;
+    width: 20rem;
+}
+    nav {
+      height: 22vh;
+      flex-wrap: wrap;
+    }
+
+    nav ul{
+    padding: 20px 5px 0;
+    }
+  
+    nav a {
+      padding: 5px 0;
+    }
+  
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+        gap: 2rem;
+        padding: 5rem 0;
+    }
+.sections h2{
+    padding: 2rem;
+}
+    .quote-section{
+        font-size: 1.2rem;
+    }
+    .quote-span{
+        padding: 7px;
+        text-align: right;
+        font-weight: 700;
+    }
+  
+    .signup-section{
+        height: 18vh;
+    }
+    .signup-div{
+        padding: 1rem;
+        margin: 40px 20px 0;
+        font-size: 18px;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .buttons{
+        width: 20rem;
+        height: 2rem;
+        color: #fff;
+        background: var(--color_one);
+    }
+    .btnx1{
+        background: #3882F6;
+    }
+    footer{
+        height: 7%;
+        font-weight: 900;
+        padding: 2rem;
+        font-size: 0.9rem;
+    }
+  }
