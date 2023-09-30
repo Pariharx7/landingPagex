@@ -63,8 +63,8 @@ nav ul{
 .right-header li a:hover{
     color: #E25822;
     padding: 0 5px 2px 0;
-    border-right: 2px solid var(--color-2);
-    border-bottom: 2px solid var(--color-2);
+    border-right: 3px solid var(--color-2);
+    border-bottom: 3px solid var(--color-2);
 }
 
 .logo-head{
@@ -258,7 +258,7 @@ footer{
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
 
     body {
       padding: 0; 
@@ -303,6 +303,7 @@ footer{
 
     nav ul{
     padding: 20px 5px 0;
+    z-index: 1;
     }
   
     nav a {
@@ -318,11 +319,15 @@ footer{
         gap: 2rem;
         padding: 5rem 0;
     }
+.sections{
+    height: 280%;
+}
 .sections h2{
     padding: 2rem;
 }
     .quote-section{
         font-size: 1.2rem;
+        height: 50vh;
     }
     .quote-span{
         padding: 7px;
@@ -331,7 +336,7 @@ footer{
     }
   
     .signup-section{
-        height: 18vh;
+        height: 27vh;
     }
     .signup-div{
         padding: 1rem;
@@ -355,5 +360,6 @@ footer{
         font-weight: 900;
         padding: 2rem;
         font-size: 0.9rem;
+        height: 7vh;
     }
   }
